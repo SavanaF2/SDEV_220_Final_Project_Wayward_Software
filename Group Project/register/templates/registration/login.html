@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Wayward Software</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <style>
+            #top_nav{
+                width:90%;
+                margin:auto;
+            }
+            body {
+                margin: 1%;
+            }
+            .user_form{
+                background: rgb(255, 255, 255);
+               width:90%;
+               margin:auto;
+               padding:100px;
+               padding-top:70px;
+            }
+        </style>
+    </head>
+    <body>
+        {% extends 'wayward_software/base1.html' %}
+     
+        {% block content %}
+        <div class="user_form">
+            <form method="post" class ="form-group">
+                <p>Login Here </p>
+                {% csrf_token %}
+                {{form}}
+                <p>Don't have an account? Create one <a href="/register">here</a></p>
+                <button type="submit" class="btn btn-success" >Login</button>                
+            </form>
+        </div>
+    </body>
+    {% endblock %}
+</html>

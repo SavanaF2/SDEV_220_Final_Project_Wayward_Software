@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Wayward Software</title>
+        <meta charset="UTF-8">
+        <style>
+
+            main{
+                background: rgb(248, 248, 248);
+                padding-bottom:50px;
+                padding-left:5px;
+                padding-right:5px;
+                padding-top:30px;
+            }
+            
+            #container{
+                background:white;
+                border:1px solid black;
+                width:70%;
+                margin-top:10px;
+                margin:auto;
+                padding-bottom:20px;
+            }
+            button{
+                display:inline-block;
+                cursor: pointer;
+            }
+            main h1{
+                text-align:center;
+                margin-top:20px;
+                margin-bottom:40px;
+            }
+        </style>
+    </head>
+    {% extends 'wayward_software/base1.html' %}
+    {%block content%}
+    <body >
+        <main>
+            <a href="user">back to profile</a>
+            <h1>Edit your subscriptions</h1>
+            <div id ="container">
+                
+            <h3 class="infoHeader">Your subscriptions:</h3>
+            <hr>
+            {% for p in user.clientprofile.packages.all %}
+                <div class="row "style="text-align:center;">
+                    <h4 style="margin:12px; margin-left:10px">
+                        {{ p.package_name }} ${{ p.subscription_price }} per month
+                    </h4>
+                    <h4 style="margin:12px; margin-left:10px">{{ p.description }}</h4>
+                    <form method="post">
+                        {% csrf_token %}
+                        <input type="hidden" value="{{p.pk}}" name="remove_pk">
+                        <button type="submit" class="primary-btn" style="font-size:18px; border-radius: 10%; margin-left:10px; margin-bottom:25px" onclick="return confirm('Are you sure you want to unsubscribe from: {{p.package_name}}')">Unsubscribe</button>
+                    </form>    
+                    <hr>
+                    {%endfor%}
+                </div>
+        </main>
+    </body>
+    {%endblock%}
+</html>
