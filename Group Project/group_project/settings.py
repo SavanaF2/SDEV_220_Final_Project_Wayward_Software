@@ -39,9 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'wayward_software',
     'register.apps.RegisterConfig',
-    
-    
-    "crispy_bootstrap4",
    
 ]
 
