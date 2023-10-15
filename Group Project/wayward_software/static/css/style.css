@@ -1,0 +1,42 @@
+
+
+  /* Style the top navigation bar */
+  .navbar {
+    overflow: hidden;
+    /* Hide overflow */
+    background-color: #333;
+    /* Dark background color */
+  }
+
+  /* Style the navigation bar links */
+  .navbar a {
+    float: left;
+    /* Make sure that the links stay side-by-side */
+    display: block;
+    /* Change the display to block, for responsive reasons (see below) */
+    color: white;
+    /* White text color */
+    text-align: center;
+    /* Center the text */
+    padding: 14px 20px;
+    /* Add some padding */
+    text-decoration: none;
+    /* Remove underline */
+  }
+body{
+    background: black;
+    padding: 50px; 
+}
+  #top_nav{
+    width: 100%;
+    background: linear-gradient(90deg, rgb(29, 29, 29), rgb(94, 94, 116), rgb(29, 29, 29));
+  }
+
+  footer {
+    padding: 20px;
+    /* Some padding */
+    text-align: center;
+    /* Center text*/
+    background: rgb(29, 29, 29);
+    /* Grey background */
+  }

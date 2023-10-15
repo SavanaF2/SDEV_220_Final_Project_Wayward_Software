@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Wayward Software</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <Style>
+      #top_nav{
+        background: linear-gradient(90deg, rgb(29, 29, 29), rgb(94, 94, 116), rgb(29, 29, 29));
+        
+      }
+      #top_nav > *{
+        display: inline-block;
+      }
+      #top_nav h1{
+        margin-top: 5px;
+        margin-left: 10px;
+        color:white;
+        font-size: 2em;
+      }
+      body{
+      margin:0px;
+      padding-left:3%;
+      padding-right:3%;
+      background: linear-gradient(45deg, rgb(255, 51, 0), blue)
+      }
+      #top_nav button{
+        margin:8px;
+        border-radius: 5px;
+        padding-left:17px;
+        padding-right:17px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        cursor: pointer;
+        border-width: 0px;  
+      }
+      footer {
+    padding: 20px;
+    /* Some padding */
+    text-align: center;
+    color: white;
+    /* Center text*/
+    background: linear-gradient(90deg, rgb(29, 29, 29), rgb(94, 94, 116), rgb(29, 29, 29));
+    /* Grey background */
+  }
+    </Style>
+    </head>  
+            <div id ="top_nav">
+              <a href="../"><h1>WS</h1></a>
+            </div>
+            {% block content %}
+            {% endblock %}
+            <footer>
+             
+              
+          </footer>
+   
+    
